@@ -1,0 +1,69 @@
+<div class="container page">
+    <div class="inner-container text-center">
+        <h4 class="font-weight-bolder">J S S MAHAVIYAPEETHA, BENGALURU</h4>
+        <h1 class="font-weight-bolder">JSS ACADEMY OF TECHNICAL EDUCATION </h1>
+        <h4>JSS Campus, Uttarahalli-Kengeri Main Road, Bengaluru - 560060</h4>
+        <h1 class="font-weight-bolder my-2">Department of <%= details["branch"] %></h1>
+        <div class="my-5">
+            <img src="/images/jss-logo.jpeg" alt="JSS logo" id="jss-logo" class="logo">
+        </div>
+        <h1 class="font-weight-bolder mb-5">CERTIFICATE</h1>
+        <div>
+            <h4 id="certificate-contents">
+                This is to certify that the Project work entitled “<% details["title"] %>” 
+                is a bonafied work carried out by 
+                <% for(let i = 1;i <= 4;i++) { %>
+                    <span class="text-uppercase font-weight-bolder"><%= `${details["member-" + i]} (${details["member-" + i + "-usn"]}), ` %></span>
+                <% } %>
+                in partial fulfillment of the degree of Bachelor of Engineering in Computer Science and Engineering of the
+                Visvesvaraya Technological University, Belagavi during the academic year 2019 - 2020.
+                It is certified that all corrections and suggestions indicated for Internal Assessment have
+                been incorporated in the report. The project has been approved as it satisfies the
+                academic requirements in respect of project work prescribed for the said degree.
+                </h4>
+        </div>
+        <div id="certificate-lecturers" class="mt-5">
+            <table>
+                <tr>
+                    <td><%= `${details["honorific"]} ${details["guide-name"]}` %></td>
+                    <td>Dr. Naveen N C</td>
+                    <td>Dr. Mrityunjaya V Latte</td>
+                </tr>
+                <tr>
+                    <td><%= `${details["designation"]}` %></td>
+                    <td>Professor & Head</td>
+                    <td>Principal</td>
+                </tr>
+                <tr>
+                    <td>Dept. of CSE</td>
+                    <td>Dept. of CSE</td>
+                    <td>JSSATE, Bengaluru</td>
+                </tr>
+                <tr>
+                    <td>JSSATE, Bengaluru</td>
+                    <td>JSSATE, Bengaluru</td>
+                    <td>JSSATE, Bengaluru</td>
+                </tr>
+            </table>
+        </div>
+        <div id="external-viva" class="mt-5">
+            <h4 class="font-weight-bolder">External Viva</h4>
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th class="text-left">Name of the Examiners</th>
+                        <th class="text-right">Signature with Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 1;i <=2;i++) {%>
+                        <tr>
+                            <td class="text-left"><%= i %>).....................................</td>
+                            <td class="text-right">.....................................</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

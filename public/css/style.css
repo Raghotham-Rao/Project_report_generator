@@ -70,3 +70,22 @@
     height: 1523px;
     width: 1140px;
 }
+
+#certificate-contents{
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+    line-height: 1.75em;
+}
+
+#certificate-lecturers table,#external-viva table{
+    width: 80%;
+    margin: auto;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+#certificate-lecturers td{
+    width: 33%;
+    border: none;
+}

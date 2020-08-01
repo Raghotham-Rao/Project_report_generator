@@ -14,7 +14,7 @@ const full_forms = {
 router.post('/create-report', (req, res) => {
     var data = req.body;
     data["branch"] = full_forms[data["branch"]];
-    res.render('report', {details: req.body});
+    res.render('report/front_sheet', {details: req.body});
 });
 
 module.exports = router;
