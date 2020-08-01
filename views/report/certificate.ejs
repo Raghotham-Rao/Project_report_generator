@@ -16,17 +16,17 @@
                     <span class="text-uppercase font-weight-bolder"><%= `${details["member-" + i]} (${details["member-" + i + "-usn"]}), ` %></span>
                 <% } %>
                 in partial fulfillment of the degree of Bachelor of Engineering in Computer Science and Engineering of the
-                Visvesvaraya Technological University, Belagavi during the academic year 2019 - 2020.
+                Visvesvaraya Technological University, Belagavi during the academic year <%= details["year"] %>.
                 It is certified that all corrections and suggestions indicated for Internal Assessment have
                 been incorporated in the report. The project has been approved as it satisfies the
                 academic requirements in respect of project work prescribed for the said degree.
-                </h4>
+            </h4>
         </div>
         <div id="certificate-lecturers" class="mt-5">
             <table>
                 <tr>
                     <td><%= `${details["honorific"]} ${details["guide-name"]}` %></td>
-                    <td>Dr. Naveen N C</td>
+                    <td><%= `${details["honorific-hod"]} ${details["department-head"]}` %></td>
                     <td>Dr. Mrityunjaya V Latte</td>
                 </tr>
                 <tr>
@@ -64,6 +64,9 @@
                     <% } %>
                 </tbody>
             </table>
+        </div>
+        <div class="roman-page-number">
+            <h4>i</h4>
         </div>
     </div>
 </div>
