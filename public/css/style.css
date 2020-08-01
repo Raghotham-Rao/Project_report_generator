@@ -1,0 +1,72 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.page{
+    /* height: 100vh; */
+    border: 5px solid black;
+    padding: 1px;
+}
+
+.inner-container{
+    border: 2px solid black;
+    height: 99.8%;
+    margin: 1px;
+    padding: 2.5%;
+    padding-top: 4%;
+}
+
+.main-heading{
+    font-weight: bolder;
+    /* font-size: 18px; */
+}
+
+.logo{
+    display: block;
+    margin: auto;
+}
+
+.normal-text{
+    font-size: 20px;
+}
+
+#degree-details{
+    margin-top: 5%;
+}
+
+#team-details table{
+    margin: auto;
+    margin-top: 2%;
+    width: 60%;
+}
+
+#team-details td:nth-child(odd){
+    text-align: left;
+    padding: 5px;
+}
+
+#team-details td:nth-child(even){
+    text-align: right;
+    padding: 5px;
+}
+
+#team-details h3{
+    font-weight: bolder;
+}
+
+#college-details h3{
+    font-weight: bolder;
+}
+
+#jss-logo{
+    width: 160px;
+}
+
+.filler{
+    line-height: 25px;
+}
+
+.page{
+    height: 1523px;
+    width: 1140px;
+}

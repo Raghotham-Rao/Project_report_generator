@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <%- include('./partials/bootstrap_loader.ejs') %>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="container page">
+        <div class="inner-container text-center">
+            <div id="university-details">
+                <div id="university-heading">
+                    <h1 class="font-weight-bolder">VISVESVARAYA TECHNOLOGICAL UNIVERSITY</h1>
+                </div>
+                <div id="university-address">
+                    <h3 class="font-weight-bolder">“Jnana Sangama”, Belagavi-590 018, KARNATAKA, INDIA</h3>
+                </div>
+            </div>
+            <div>
+                <img src="/images/vtu-logo.jpeg" alt="image not found" id="vtu-logo" class="logo">
+            </div>
+            <div class="filler">
+                <p class="normal-text">A <br> PROJECT REPORT <br> ON</p>
+            </div>
+            <div>
+                <h1 class="font-weight-bolder text-uppercase">"<%= details["project-title"] %>"</h1>
+            </div>
+            <div class="mt-3">
+                <h4 class="font-weight-bolder">Submitted in partial fulfillment of the requirements for the award of the degree of</h4>
+            </div>
+            <div id="degree-details">
+                <h3 class="font-weight-bolder text-uppercase">
+                    BACHELOR OF ENGINEERING <br/> IN <br/> <%= details["branch"] %>
+                </h3>
+            </div>
+            <div id="team-details">
+                <h3 class="text-center font-weight-bolder mt-5">Submitted by</h3>
+                <table>
+                    <tbody>
+                        <% for(let i = 1;i <= 4; i++) { %>
+                            <tr>
+                                <td class="text-uppercase"><h3><%= details[`member-${i}`] %></h3></td>
+                                <td class="text-uppercase"><h3><%= details[`member-${i}-usn`] %></h3></td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <div id="guide-details">
+                <h3 class="text-center font-weight-bolder mt-4">Under the guidance of</h3>
+                <h3 class="text-center font-weight-bolder mt-3">
+                    <%= details["honorific"] %> <span class="text-uppercase"><%= details["guide-name"] %></span> <br/> <%= details["designation"] %> <br/> Department of <%= details["branch"] %> <br/> JSSATE, Bengaluru
+                </h3>
+            </div>
+            <div class="my-3">
+                <img src="/images/jss-logo.jpeg" alt="JSS logo" id="jss-logo" class="logo">
+            </div>
+            <div id="college-details" class="mt-3">
+                <h3>JSS ACADEMY OF TECHNICAL EDUCATION, BENGALURU</h3>
+                <h3>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</h3>
+                <h3><%= details["year"] %></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5"></div>
+
+    <div class="container page">
+        <div class="inner-container text-center">
+            
+        </div>
+    </div>
+    
+</body>
+</html>
